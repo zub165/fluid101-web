@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Hydration Guide</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #10b981;
+      --dark: #1e293b;
+      --light: #f8fafc;
+      --gray: #94a3b8;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --success: #10b981;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: #f1f5f9;
+      padding-bottom: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    header {
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 1.25rem;
+    }
+
+    .logo i {
+      font-size: 1.5rem;
+    }
+
+    .version {
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
+    h1 {
+      color: var(--primary);
+      margin: 1.5rem 0;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      color: var(--primary-dark);
+      margin: 2rem 0 1rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      color: var(--primary);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.25rem;
+    }
+
+    h4 {
+      color: var(--dark);
+      margin: 1rem 0 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .recipe {
+      background: #f0f9ff;
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+    }
+
+    .note {
+      background: #fff7ed;
+      border-left: 4px solid var(--warning);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .warning {
+      background: #fef2f2;
+      border-left: 4px solid var(--danger);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    ul, ol {
+      margin: 0.5rem 0 1rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .ingredient-list {
+      margin: 1rem 0;
+    }
+
+    .ingredient {
+      display: flex;
+      margin-bottom: 0.5rem;
+    }
+
+    .ingredient-name {
+      font-weight: 500;
+      min-width: 150px;
+    }
+
+    .reference {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+      border-left: 2px solid #e2e8f0;
+    }
+
+    .reference a {
+      color: #475569;
+      text-decoration: none;
+    }
+
+    .reference a:hover {
+      text-decoration: underline;
+    }
+
+    .conversion-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+
+    .conversion-table th, .conversion-table td {
+      border: 1px solid #e2e8f0;
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    .conversion-table th {
+      background-color: #f1f5f9;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e2e8f0;
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.75rem;
+      }
+      
+      h2 {
+        font-size: 1.3rem;
+      }
+      
+      .header-content {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">
+          <i class="fas fa-tint"></i>
+          <span>Comprehensive Hydration Guide</span>
+        </a>
+        <div class="version">Version 1.0 · Last Updated: 2023-08-20</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Comprehensive Hydration Guide</h1>
+
+    <section id="oral-rehydration">
+      <h2>Oral Rehydration Solutions</h2>
+      
+      <div class="card">
+        <h3>WHO Standard Oral Rehydration Solution</h3>
+        <p>The gold standard solution for treating dehydration from diarrhea</p>
+        
+        <div class="recipe">
+          <h4>Ingredients:</h4>
+          <div class="ingredient-list">
+            <div class="ingredient">
+              <span class="ingredient-name">Clean water</span>
+              <span>1 liter (boiled and cooled or bottled)</span>
+            </div>
+            <div class="ingredient">
+              <span class="ingredient-name">Sugar</span>
+              <span>6 level teaspoons (25g)</span>
+            </div>
+            <div class="ingredient">
+              <span class="ingredient-name">Salt</span>
+              <span>½ level teaspoon (2.9g)</span>
+            </div>
+          </div>
+          
+          <h4>Preparation:</h4>
+          <p>Mix all ingredients until completely dissolved</p>
+          
+          <h4>Usage:</h4>
+          <ul>
+            <li><strong>Infants:</strong> 50-100mL after each loose stool</li>
+            <li><strong>Children:</strong> 100-200mL after each loose stool</li>
+            <li><strong>Adults:</strong> As much as wanted, up to 2L/day</li>
+          </ul>
+          
+          <div class="reference">
+            Reference: World Health Organization. (2005). <a href="https://www.who.int/publications/i/item/9241593180" target="_blank">The Treatment of Diarrhoea: A Manual for Physicians</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Homemade Alternatives</h3>
+        
+        <h4>Rice-Based ORS</h4>
+        <p>Alternative when sugar is unavailable</p>
+        <div class="ingredient-list">
+          <div class="ingredient">
+            <span class="ingredient-name">Rice water</span>
+            <span>1 liter (from 50g rice cooked in 1L water)</span>
+          </div>
+          <div class="ingredient">
+            <span class="ingredient-name">Salt</span>
+            <span>½ teaspoon</span>
+          </div>
+        </div>
+        <div class="reference">
+          Reference: Journal of Pediatric Gastroenterology and Nutrition. (2000). Rice-based oral rehydration solution for treating acute diarrhoea
+        </div>
+        
+        <h4 style="margin-top: 1.5rem;">Fruit Juice ORS</h4>
+        <p>For improved palatability</p>
+        <div class="ingredient-list">
+          <div class="ingredient">
+            <span class="ingredient-name">Clean water</span>
+            <span>750mL</span>
+          </div>
+          <div class="ingredient">
+            <span class="ingredient-name">Orange juice</span>
+            <span>250mL</span>
+          </div>
+          <div class="ingredient">
+            <span class="ingredient-name">Salt</span>
+            <span>½ teaspoon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="condition-specific">
+      <h2>Condition-Specific Fluid Recommendations</h2>
+      
+      <div class="card">
+        <h3>Vomiting</h3>
+        <h4>Small Frequent Sips Protocol</h4>
+        <p>Gradual rehydration for vomiting patients</p>
+        <ul>
+          <li>Wait 10 minutes after vomiting before starting</li>
+          <li>Begin with 5mL (1 teaspoon) every 5 minutes</li>
+          <li>Double amount every hour if tolerated</li>
+          <li>Use standard ORS when possible</li>
+        </ul>
+        <div class="reference">
+          Reference: Journal of Pediatric Gastroenterology and Nutrition. (2014). Acute Gastroenteritis Guidelines
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Excessive Sweating</h3>
+        <h4>Electrolyte Replacement Drink</h4>
+        <div class="ingredient-list">
+          <div class="ingredient">
+            <span class="ingredient-name">Water</span>
+            <span>1 liter</span>
+          </div>
+          <div class="ingredient">
+            <span class="ingredient-name">Sugar</span>
+            <span>6 teaspoons</span>
+          </div>
+          <div class="ingredient">
+            <span class="ingredient-name">Salt</span>
+            <span>½ teaspoon</span>
+          </div>
+          <div class="ingredient">
+            <span class="ingredient-name">Orange juice</span>
+            <span>½ cup (for potassium)</span>
+          </div>
+        </div>
+        <div class="reference">
+          Reference: Medicine & Science in Sports & Exercise. (2007). ACSM Position Stand on Exercise and Fluid Replacement
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Burns</h3>
+        <h4>Burn Rehydration Solution</h4>
+        <div class="warning">
+          <strong>Warning:</strong> Interim measure only - seek medical care immediately
+        </div>
+        <div class="ingredient-list">
+          <div class="ingredient">
+            <span class="ingredient-name">Water</span>
+            <span>1 liter</span>
+          </div>
+          <div class="ingredient">
+            <span class="ingredient-name">Sugar</span>
+            <span>6 teaspoons</span>
+          </div>
+          <div class="ingredient">
+            <span class="ingredient-name">Salt</span>
+            <span>½ teaspoon</span>
+          </div>
+          <div class="ingredient">
+            <span class="ingredient-name">Baking soda</span>
+            <span>½ teaspoon (for bicarbonate)</span>
+          </div>
+        </div>
+        <p><strong>Usage:</strong> 1L in first hour for adults, then as tolerated</p>
+        <div class="reference">
+          Reference: Journal of Burn Care & Research. (2013). Oral Rehydration Therapy for Burn Shock
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Fever</h3>
+        <h4>Fever Hydration Protocol</h4>
+        <ul>
+          <li>Increase fluids by 10-15% per 1°C above normal</li>
+          <li>Offer fluids every 15-30 minutes</li>
+          <li>Use lukewarm fluids (not ice-cold)</li>
+          <li>Include electrolytes if fever persists >24 hours</li>
+        </ul>
+        <div class="reference">
+          Reference: Pediatrics. (2011). Fever and Antipyretic Use in Children
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Kidney Stones</h3>
+        <h4>General Stone Prevention</h4>
+        <ul>
+          <li>Water: 3L+ per day (goal >2.5L urine output)</li>
+          <li>Lemon water: 120mL lemon juice in 2L water daily</li>
+          <li>Avoid: Grapefruit juice, colas, excessive caffeine</li>
+        </ul>
+        <div class="reference">
+          Reference: Journal of Urology. (2014). Medical Management of Kidney Stones
+        </div>
+        
+        <h4 style="margin-top: 1.5rem;">Stone-Type Specific</h4>
+        <ul>
+          <li><strong>Calcium oxalate:</strong> Citrus juices, moderate calcium intake</li>
+          <li><strong>Uric acid:</strong> Alkaline fluids (citrus, vegetable juices)</li>
+          <li><strong>Cystine:</strong> Very high fluid intake (>4L/day)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="age-specific">
+      <h2>Age-Specific Guidelines</h2>
+      
+      <div class="card">
+        <h3>Infants (0-12 months)</h3>
+        <p><strong>Daily Requirements:</strong> 150-200mL/kg/day (0-6mo), 120-150mL/kg/day (6-12mo)</p>
+        <h4>Special Notes:</h4>
+        <ul>
+          <li>Breast milk or formula meets all hydration needs</li>
+          <li>Avoid plain water in large amounts (risk of hyponatremia)</li>
+          <li>Double fluid intake during illness</li>
+        </ul>
+        <div class="reference">
+          Reference: American Academy of Pediatrics. (2019). Pediatric Nutrition Handbook
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Elderly (65+ years)</h3>
+        <p><strong>Daily Requirements:</strong> 30mL/kg/day</p>
+        <h4>Special Notes:</h4>
+        <ul>
+          <li>Reduced thirst sensation increases dehydration risk</li>
+          <li>Schedule fluid intake rather than relying on thirst</li>
+          <li>Monitor for confusion, dry mouth, sunken eyes</li>
+        </ul>
+        <div class="reference">
+          Reference: Cochrane Database of Systematic Reviews. (2014). Water-loss dehydration and aging
+        </div>
+      </div>
+    </section>
+
+    <section id="activity-levels">
+      <h2>Activity Level Guidelines</h2>
+      
+      <div class="card">
+        <h3>Sedentary</h3>
+        <p><strong>Recommendations:</strong> Men: 3.7L/day, Women: 2.7L/day (includes food moisture)</p>
+        <p><strong>Monitoring:</strong> Urine color (pale yellow ideal)</p>
+      </div>
+      
+      <div class="card">
+        <h3>Athletes</h3>
+        <h4>Hydration Strategy</h4>
+        <ul>
+          <li><strong>Pre-exercise:</strong> 5-7mL/kg 4 hours before</li>
+          <li><strong>During:</strong> 0.4-0.8L/hour based on sweat rate</li>
+          <li><strong>Post:</strong> 1.5L per kg body weight lost</li>
+          <li><strong>Electrolytes:</strong> 20-30mEq/L sodium for >1hr exercise</li>
+        </ul>
+        <div class="reference">
+          Reference: American College of Sports Medicine. (2007). Exercise and Fluid Replacement Position Stand
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Outdoor Workers</h3>
+        <h4>Recommendations</h4>
+        <ul>
+          <li>Drink 250mL every 15-20 minutes in heat</li>
+          <li>Include electrolytes for shifts >4 hours</li>
+          <li>Weigh before/after shift to gauge fluid loss</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="emergency">
+      <h2>Emergency Signs</h2>
+      
+      <div class="card">
+        <h3>Severe Dehydration</h3>
+        <ul>
+          <li>No urine for 8+ hours</li>
+          <li>Sunken eyes (in children)</li>
+          <li>Extreme lethargy or confusion</li>
+          <li>Rapid weak pulse</li>
+          <li>Cold extremities</li>
+        </ul>
+        
+        <h3 style="margin-top: 1.5rem;">Immediate Actions</h3>
+        <ul>
+          <li>Begin oral rehydration if conscious</li>
+          <li>Seek emergency medical care</li>
+          <li>Prepare for possible IV fluids</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="conversion-tools">
+      <h2>Conversion Tools</h2>
+      
+      <div class="card">
+        <h3>Volume Conversions</h3>
+        <table class="conversion-table">
+          <tr>
+            <th>Unit</th>
+            <th>Equivalent</th>
+          </tr>
+          <tr>
+            <td>Teaspoon</td>
+            <td>5mL</td>
+          </tr>
+          <tr>
+            <td>Tablespoon</td>
+            <td>15mL</td>
+          </tr>
+          <tr>
+            <td>Cup</td>
+            <td>240mL</td>
+          </tr>
+          <tr>
+            <td>Liter</td>
+            <td>4.2 cups</td>
+          </tr>
+        </table>
+        
+        <h3 style="margin-top: 1.5rem;">Weight Conversions</h3>
+        <table class="conversion-table">
+          <tr>
+            <th>Unit</th>
+            <th>Equivalent</th>
+          </tr>
+          <tr>
+            <td>Kilogram</td>
+            <td>2.2 pounds</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>This information is for educational purposes only and not a substitute for professional medical advice. Always consult with a healthcare provider for individual recommendations.</p>
+    </div>
+  </footer>
+</body>
+</html>

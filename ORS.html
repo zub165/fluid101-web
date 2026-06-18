@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comprehensive guide to oral rehydration solutions for various conditions">
+  <title>ORS Guide - Oral Rehydration Solutions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #10b981;
+      --dark: #1e293b;
+      --light: #f8fafc;
+      --gray: #94a3b8;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --success: #10b981;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: #f1f5f9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    header {
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 1.25rem;
+    }
+
+    .logo i {
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--dark);
+      cursor: pointer;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      opacity: 0.9;
+    }
+
+    .search-bar {
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 50px;
+      border: none;
+      font-size: 1rem;
+      padding-left: 3rem;
+    }
+
+    .search-bar i {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gray);
+    }
+
+    .main-content {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .condition-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+
+    .card-header {
+      background: var(--primary);
+      color: white;
+      padding: 1rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-header i {
+      font-size: 1.5rem;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+
+    .card ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.25rem;
+    }
+
+    .card li {
+      margin-bottom: 0.5rem;
+    }
+
+    .recipe {
+      background: #f0f9ff;
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+    }
+
+    .recipe ol {
+      padding-left: 1.25rem;
+    }
+
+    .note {
+      background: #fff7ed;
+      border-left: 4px solid var(--warning);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .note strong {
+      color: var(--warning);
+    }
+
+    .warning {
+      background: #fef2f2;
+      border-left: 4px solid var(--danger);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .warning strong {
+      color: var(--danger);
+    }
+
+    .sidebar {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+    }
+
+    .quick-links li {
+      list-style: none;
+      margin-bottom: 0.75rem;
+    }
+
+    .quick-links a {
+      color: var(--dark);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s;
+    }
+
+    .quick-links a:hover {
+      color: var(--primary);
+    }
+
+    .quick-links i {
+      color: var(--primary);
+      width: 1.25rem;
+      text-align: center;
+    }
+
+    .emergency-card {
+      background: #fee2e2;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .emergency-card h3 {
+      color: var(--danger);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .emergency-card p {
+      margin-bottom: 0.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-danger {
+      background: var(--danger);
+    }
+
+    .btn-danger:hover {
+      background: #dc2626;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 0 2rem;
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-column h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-column a {
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-column a:hover {
+      color: white;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      color: white;
+      font-size: 1.25rem;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid #334155;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 0.75rem 0;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      header, footer, .sidebar, .search-bar {
+        display: none;
+      }
+
+      .main-content {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        break-inside: avoid;
+        margin-bottom: 1rem;
+      }
+
+      body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="logo">
+          <i class="fas fa-tint"></i>
+          <span>ORS Guide</span>
+        </a>
+        <div class="nav-links">
+          <a href="#diarrhea">Diarrhea</a>
+          <a href="#vomiting">Vomiting</a>
+          <a href="#sweating">Sweating</a>
+          <a href="#burns">Burns</a>
+          <a href="#fever">Fever</a>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Oral Rehydration Solutions Guide</h1>
+      <p>Learn how to make and use oral rehydration solutions for various conditions to prevent and treat dehydration</p>
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search for conditions or symptoms...">
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="main-content">
+      <div class="content">
+        <section id="diarrhea" class="condition-section">
+          <div class="card">
+            <div class="card-header">
+              <span>Dehydration from Diarrhea</span>
+              <i class="fas fa-toilet"></i>
+            </div>
+            <div class="card-body">
+              <h3>When is Rehydration Needed (Symptoms)</h3>
+              <ul>
+                <li>Frequent loose, watery stools (3 or more in a day) leading to fluid loss</li>
+                <li>Signs of dehydration: thirst and dry mouth; dark yellow urine or urinating less often</li>
+                <li>Sunken eyes, or in babies a sunken soft spot on the head (fontanelle)</li>
+                <li>Lethargy, irritability, or dizziness/lightheadedness due to low fluids</li>
+                <li>In infants: few or no tears when crying, and significantly fewer wet diapers</li>
+              </ul>
+
+              <h3>Homemade Rehydration Recipe</h3>
+              <div class="recipe">
+                <p>This simple Oral Rehydration Solution (ORS) replaces lost water, sugars, and salts using common kitchen ingredients:</p>
+                <ol>
+                  <li>Take <strong>1 liter (about 4¼ cups)</strong> of safe drinking water (boiled and cooled, or bottled water)</li>
+                  <li>Add <strong>6 teaspoons of sugar</strong> and <strong>½ teaspoon of salt</strong> into the water</li>
+                  <li>Stir thoroughly until the sugar and salt are completely dissolved</li>
+                  <li><em>Option:</em> For flavor and extra electrolytes, you may add ½ cup of 100% orange juice or mashed banana</li>
+                </ol>
+              </div>
+              
+              <div class="note">
+                <strong>Note:</strong> Measure ingredients carefully – too much salt or sugar can be harmful. Always use level measurements. Use clean water only. <strong>Do not</strong> add other ingredients beyond the recipe.
+              </div>
+
+              <h3>Usage Guidelines</h3>
+              <ul>
+                <li>Start giving the solution as soon as diarrhea begins – do not wait for severe dehydration</li>
+                <li><strong>Children under 2 years:</strong> Give about 50–100 mL (¼ to ½ cup) of ORS after each loose stool</li>
+                <li><strong>Children 2 to 9 years:</strong> Give ~100–200 mL (½ to 1 cup) after each loose stool</li>
+                <li><strong>Older children and adults:</strong> Drink as much as wanted, aiming for up to ~2 liters per day</li>
+                <li>Continue regular feeding as tolerated: infants should continue breast milk or their normal formula alongside ORS</li>
+              </ul>
+
+              <div class="warning">
+                <h3>When to Seek Medical Attention</h3>
+                <ul>
+                  <li>Signs of <strong>severe dehydration:</strong> extreme lethargy, inability to drink, no urination for 8+ hours</li>
+                  <li>If diarrhea is bloody or black, or accompanied by persistent high fever or severe abdominal pain</li>
+                  <li>If the person is showing signs of shock (weak rapid pulse, confusion, fainting)</li>
+                  <li>In infants under 6 months, any dehydration can become serious quickly</li>
+                </ul>
+                <a href="#" class="btn btn-danger" style="margin-top: 1rem;">
+                  <i class="fas fa-phone-alt"></i> Emergency Contacts
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="vomiting" class="condition-section">
+          <div class="card">
+            <div class="card-header">
+              <span>Dehydration from Vomiting</span>
+              <i class="fas fa-vomit"></i>
+            </div>
+            <div class="card-body">
+              <!-- Vomiting content similar to diarrhea section -->
+              <h3>When is Rehydration Needed (Symptoms)</h3>
+              <ul>
+                <li>Repeated bouts of vomiting especially if the person cannot keep liquids down for several hours</li>
+                <li>Dry mouth and tongue, cracked lips, or absence of saliva</li>
+                <li>Thirst and irritability</li>
+                <li>Dizziness or lightheadedness, especially when standing up</li>
+                <li>In babies and young children: sunken eyes or sunken fontanelle, no tears when crying</li>
+              </ul>
+
+              <h3>Homemade Rehydration Recipe</h3>
+              <div class="recipe">
+                <p>Use the same sugar-salt solution (ORS) recipe to rehydrate after vomiting episodes:</p>
+                <ol>
+                  <li>Prepare 1 liter of clean water and mix in 6 tsp sugar + ½ tsp salt, stirred until dissolved</li>
+                  <li>Ensure the solution is at room temperature</li>
+                  <li>Optionally, you can freeze some ORS in an ice cube tray or as popsicles</li>
+                </ol>
+              </div>
+              
+              <div class="note">
+                <strong>Note:</strong> If even tiny sips of ORS trigger vomiting, try other mild fluids temporarily like clear diluted apple juice or flat ginger ale mixed with water.
+              </div>
+
+              <h3>Usage Guidelines</h3>
+              <ul>
+                <li><strong>Start slow:</strong> Wait 5–10 minutes after vomiting, then begin with small amounts</li>
+                <li><strong>Young children (under ~5 years):</strong> Use a spoon or medicine syringe to give ~5 mL of fluid at a time</li>
+                <li><strong>Older children and teens:</strong> Start with small sips (~1–2 tablespoons) every 5-10 minutes</li>
+                <li><strong>Adults:</strong> Take small sips or ice chips frequently</li>
+                <li>Monitor urine output - should urinate at least a few times per day</li>
+              </ul>
+
+              <div class="warning">
+                <h3>When to Seek Medical Attention</h3>
+                <ul>
+                  <li>If <strong>every attempt to drink results in immediate vomiting</strong> for more than 4–6 hours</li>
+                  <li>Watch for signs of worsening dehydration: no urine for 8 hours, worsening lethargy or confusion</li>
+                  <li>If vomit is bloody, dark green, or looks like "coffee grounds"</li>
+                  <li>If accompanied by high fever (above 39°C / 102°F), stiff neck, or severe headache</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Similar sections for Sweating, Burns, and Fever -->
+        <section id="sweating" class="condition-section">
+          <div class="card">
+            <div class="card-header">
+              <span>Dehydration from Excessive Sweating</span>
+              <i class="fas fa-sun"></i>
+            </div>
+            <div class="card-body">
+              <!-- Sweating content -->
+            </div>
+          </div>
+        </section>
+
+        <section id="burns" class="condition-section">
+          <div class="card">
+            <div class="card-header">
+              <span>Dehydration from Burns</span>
+              <i class="fas fa-fire"></i>
+            </div>
+            <div class="card-body">
+              <!-- Burns content -->
+            </div>
+          </div>
+        </section>
+
+        <section id="fever" class="condition-section">
+          <div class="card">
+            <div class="card-header">
+              <span>Dehydration from Fever or Illness</span>
+              <i class="fas fa-thermometer-full"></i>
+            </div>
+            <div class="card-body">
+              <!-- Fever content -->
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="sidebar">
+        <h2>Quick Links</h2>
+        <ul class="quick-links">
+          <li>
+            <a href="#diarrhea">
+              <i class="fas fa-toilet"></i>
+              Diarrhea
+            </a>
+          </li>
+          <li>
+            <a href="#vomiting">
+              <i class="fas fa-vomit"></i>
+              Vomiting
+            </a>
+          </li>
+          <li>
+            <a href="#sweating">
+              <i class="fas fa-sun"></i>
+              Excessive Sweating
+            </a>
+          </li>
+          <li>
+            <a href="#burns">
+              <i class="fas fa-fire"></i>
+              Burns
+            </a>
+          </li>
+          <li>
+            <a href="#fever">
+              <i class="fas fa-thermometer-full"></i>
+              Fever/Illness
+            </a>
+          </li>
+        </ul>
+
+        <div class="emergency-card">
+          <h3><i class="fas fa-exclamation-triangle"></i> Emergency Warning Signs</h3>
+          <p>Seek immediate medical attention if you observe:</p>
+          <ul>
+            <li>No urine for 8+ hours</li>
+            <li>Extreme lethargy or confusion</li>
+            <li>Rapid heartbeat</li>
+            <li>Sunken eyes (in children)</li>
+            <li>Fainting or loss of consciousness</li>
+          </ul>
+          <a href="#" class="btn btn-danger" style="margin-top: 1rem; width: 100%;">
+            <i class="fas fa-phone-alt"></i> Call Emergency Services
+          </a>
+        </div>
+
+        <h2 style="margin-top: 2rem;">Download Resources</h2>
+        <a href="#" class="btn" style="width: 100%; margin-bottom: 0.5rem;">
+          <i class="fas fa-file-pdf"></i> Printable ORS Guide
+        </a>
+        <a href="#" class="btn" style="width: 100%;">
+          <i class="fas fa-mobile-alt"></i> Mobile App
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Conditions</h3>
+          <ul>
+            <li><a href="#diarrhea">Diarrhea</a></li>
+            <li><a href="#vomiting">Vomiting</a></li>
+            <li><a href="#sweating">Excessive Sweating</a></li>
+            <li><a href="#burns">Burns</a></li>
+            <li><a href="#fever">Fever/Illness</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Printable Guides</a></li>
+            <li><a href="#">Mobile App</a></li>
+            <li><a href="#">Healthcare Providers</a></li>
+            <li><a href="#">Clinical References</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Medical Review Board</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="Privacy.html">Privacy Policy</a></li>
+            <li><a href="Support.html">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Connect With Us</h3>
+          <p>Follow us for health tips and updates</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 ORS Guide. All rights reserved. This information is not intended as medical advice. Always consult a healthcare professional.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu if open
+          if (window.innerWidth <= 768) {
+            document.querySelector('.nav-links').style.display = 'none';
+          }
+        }
+      });
+    });
+
+    // Search functionality
+    const searchInput = document.querySelector('.search-bar input');
+    searchInput.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') {
+        const searchTerm = this.value.toLowerCase();
+        const conditionSections = document.querySelectorAll('.condition-section');
+        
+        conditionSections.forEach(section => {
+          const sectionText = section.textContent.toLowerCase();
+          if (sectionText.includes(searchTerm)) {
+            section.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
