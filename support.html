@@ -1,119 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support - Fluid101</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Fluid 101</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --dark: #1e293b;
+      --danger: #ef4444;
+      --success: #10b981;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      color: var(--dark);
+      background: #f1f5f9;
     }
-    h1, h2 {
-      color: #2563eb;
+    .container { max-width: 860px; margin: 0 auto; padding: 0 1rem; }
+    header {
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
-    a {
-      color: #2563eb;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      color: var(--primary);
       text-decoration: none;
+      font-size: 1.15rem;
     }
-    a:hover {
-      text-decoration: underline;
+    .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .nav-links a {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
     }
-    .faq-section {
-      margin-top: 2rem;
+    .nav-links a:hover { color: var(--primary); }
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 2.5rem 0;
+      margin-bottom: 2rem;
     }
-    .faq {
-      margin-bottom: 1.5rem;
+    .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .hero p { opacity: 0.9; }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin-bottom: 1.25rem;
     }
-    .emergency {
-      background-color: #fff4f4;
-      border-left: 5px solid #e11d48;
+    h2 { color: var(--primary); margin-bottom: 0.75rem; font-size: 1.2rem; }
+    p { margin-bottom: 0.75rem; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .contact-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
       padding: 1rem;
-      margin-top: 2rem;
+    }
+    .contact-item i {
+      color: var(--primary);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .contact-item a { color: var(--primary-dark); font-weight: 600; }
+    .faq-item { border-bottom: 1px solid #e2e8f0; padding: 1rem 0; }
+    .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .faq-item strong { display: block; margin-bottom: 0.35rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover { background: var(--primary-dark); }
+    .btn-danger { background: var(--danger); color: white; }
+    .btn-danger:hover { background: #dc2626; }
+    .danger-zone {
+      border: 1px solid #fecaca;
+      background: #fef2f2;
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-top: 0.5rem;
     }
     footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
+      background: var(--dark);
+      color: white;
+      padding: 1.5rem 0;
       text-align: center;
+      margin-top: 2rem;
     }
-  </style>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="theme-color" content="#0f766e" />
-  <style id="mobile-enhance">
-    *, *::before, *::after { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-    body { margin: 0; overflow-x: hidden; }
-    img, video, iframe, svg, canvas, table { max-width: 100%; height: auto; }
-    input, select, textarea, button { max-width: 100%; font-size: 16px; }
-    @media (max-width: 768px) {
-      body { padding-left: 12px; padding-right: 12px; }
-      h1 { font-size: 1.5rem; }
-    }
+    footer a { color: #93c5fd; }
   </style>
 </head>
 <body>
-  <h1>Fluid101 Support Center</h1>
-  <p>Welcome! This page provides answers to common questions, contact information, and emergency guidance related to the Fluid101 app.</p>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo"><i class="fas fa-tint"></i><span>Fluid 101</span></a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-  <h2>Contact Us</h2>
-  <ul>
-    <li><strong>Email:</strong> <a href="mailto:zub165@yahoo.com">zub165@yahoo.com</a></li>
-    <li><strong>Developer:</strong> Innovators Generation</li>
-    <li><strong>App Version:</strong> 1.0.0</li>
-  </ul>
+  <section class="hero">
+    <div class="container">
+      <h1>Support</h1>
+      <p>We're here to help with Fluid 101</p>
+    </div>
+  </section>
 
-  <div class="faq-section">
-    <h2>Frequently Asked Questions (FAQs)</h2>
-
-    <div class="faq">
-      <strong>Q: What is Fluid101?</strong>
-      <p>A: Fluid101 is a health tool that provides evidence-based oral rehydration solutions for different conditions like diarrhea, vomiting, fever, sweating, and burns.</p>
+  <div class="container">
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p>For app support, feedback, or privacy-related requests, reach out using one of the options below. We aim to respond within 2–3 business days.</p>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <p><strong>Email</strong></p>
+          <p><a href="mailto:support@fluid101.app">support@fluid101.app</a></p>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <p><strong>GitHub</strong></p>
+          <p><a href="https://github.com/zub165/fluid101/issues" target="_blank" rel="noopener noreferrer">Report an issue</a></p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-shield-alt"></i>
+          <p><strong>Privacy</strong></p>
+          <p><a href="privacy.html">Privacy Policy</a></p>
+        </div>
+      </div>
     </div>
 
-    <div class="faq">
-      <strong>Q: Who can use this app?</strong>
-      <p>A: This app is suitable for use by laypersons, caregivers, and healthcare workers. It is designed to work for all age groups including infants, children, adults, and elderly.</p>
+    <div class="card">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <strong>Is Fluid 101 medical advice?</strong>
+        <p>No. Fluid 101 provides educational hydration guidance. Always consult a healthcare professional for medical decisions.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Does the app collect my health data on a server?</strong>
+        <p>No. Tracker data and preferences are stored locally on your device only. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+      </div>
+      <div class="faq-item">
+        <strong>How do I change language or theme?</strong>
+        <p>In the mobile app, use the language and palette icons in the top app bar. Settings are saved on your device.</p>
+      </div>
+      <div class="faq-item">
+        <strong>How do I delete my data?</strong>
+        <p>Use <strong>Delete All Local Data</strong> in the app Settings screen, or the button below for website data stored in your browser.</p>
+      </div>
     </div>
 
-    <div class="faq">
-      <strong>Q: Does Fluid101 work offline?</strong>
-      <p>A: Yes. Once installed, all rehydration recipes and guidance are available offline.</p>
+    <div class="card">
+      <h2>Delete Local Data</h2>
+      <p>If you want to remove all data Fluid 101 has saved on this device or browser, you can do so below. This will reset preferences and tracker information stored locally.</p>
+      <div class="danger-zone">
+        <p><strong>Mobile app:</strong> Open Settings → Delete All Local Data.</p>
+        <p><strong>Website:</strong> Click the button below to clear browser storage for this site.</p>
+        <button class="btn btn-danger" type="button" onclick="deleteLocalData()">
+          <i class="fas fa-trash-alt"></i> Delete Local Website Data
+        </button>
+      </div>
+      <p style="margin-top:1rem;"><a class="btn btn-primary" href="privacy.html">Read Privacy Policy</a></p>
     </div>
-
-    <div class="faq">
-      <strong>Q: Is this a substitute for medical advice?</strong>
-      <p>A: No. Fluid101 is for educational and supportive use only. It does not replace professional medical consultation or emergency care.</p>
-    </div>
-
-    <div class="faq">
-      <strong>Q: Why was I asked to grant location permissions?</strong>
-      <p>A: In future versions, Fluid101 may include location-based features to guide users to nearby emergency facilities. For now, no location data is used or collected.</p>
-    </div>
-  </div>
-
-  <div class="emergency">
-    <h2>🚨 Emergency Help</h2>
-    <p>If someone is experiencing symptoms of <strong>severe dehydration</strong> such as:</p>
-    <ul>
-      <li>Sunken eyes or dry mouth</li>
-      <li>Extreme lethargy or confusion</li>
-      <li>Fast or weak pulse</li>
-      <li>Seizures or unconsciousness</li>
-    </ul>
-    <p><strong>Seek immediate medical attention.</strong> Call emergency services or go to the nearest hospital or clinic.</p>
   </div>
 
   <footer>
-    <p>&copy; 2025 Fluid101 by Innovators Generation. All rights reserved.</p>
-    <p>This information is for educational purposes only and is not a substitute for professional medical care.</p>
+    <div class="container">
+      <p>&copy; 2026 Fluid 101 · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></p>
+    </div>
   </footer>
+
+  <script>
+    function deleteLocalData() {
+      if (!confirm('Delete all locally stored data for this site on this device? This cannot be undone.')) return;
+      try {
+        localStorage.clear();
+        sessionStorage.clear();
+        alert('Local data has been deleted successfully.');
+      } catch (e) {
+        alert('Unable to delete local data. Please clear site data in your browser settings.');
+      }
+    }
+  </script>
 </body>
 </html>

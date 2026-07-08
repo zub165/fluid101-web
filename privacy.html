@@ -3,72 +3,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy | Hydration Guide</title>
+  <title>Privacy Policy — Fluid 101</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --dark: #1e293b;
+      --danger: #ef4444;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 2rem;
-      background-color: #f9f9f9;
-      color: #333;
-      max-width: 800px;
-      margin: auto;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      color: var(--dark);
+      background: #f1f5f9;
     }
-    h1, h2 {
-      color: #2563eb;
+    .container { max-width: 860px; margin: 0 auto; padding: 0 1rem; }
+    header {
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
-    a {
-      color: #2563eb;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      color: var(--primary);
       text-decoration: none;
+      font-size: 1.15rem;
     }
-    a:hover {
-      text-decoration: underline;
+    .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .nav-links a {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
     }
-  </style>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="theme-color" content="#0f766e" />
-  <style id="mobile-enhance">
-    *, *::before, *::after { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-    body { margin: 0; overflow-x: hidden; }
-    img, video, iframe, svg, canvas, table { max-width: 100%; height: auto; }
-    input, select, textarea, button { max-width: 100%; font-size: 16px; }
-    @media (max-width: 768px) {
-      body { padding-left: 12px; padding-right: 12px; }
-      h1 { font-size: 1.5rem; }
+    .nav-links a:hover { color: var(--primary); }
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 2.5rem 0;
+      margin-bottom: 2rem;
     }
+    .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .hero p { opacity: 0.9; }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin-bottom: 2rem;
+    }
+    h2 { color: var(--primary); margin: 1.5rem 0 0.75rem; font-size: 1.25rem; }
+    h2:first-child { margin-top: 0; }
+    p, li { margin-bottom: 0.75rem; }
+    ul { padding-left: 1.5rem; }
+    .note {
+      background: #eff6ff;
+      border-left: 4px solid var(--primary);
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.25rem 0;
+    }
+    .danger-zone {
+      border: 1px solid #fecaca;
+      background: #fef2f2;
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .btn-danger { background: var(--danger); color: white; }
+    .btn-danger:hover { background: #dc2626; }
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 1.5rem 0;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    footer a { color: #93c5fd; }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p>Effective Date: April 14, 2025</p>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo"><i class="fas fa-tint"></i><span>Fluid 101</span></a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-  <p>This privacy policy explains how <strong>Hydration Guide</strong> collects, uses, and protects your information. By using this application, you agree to the terms outlined in this policy.</p>
+  <section class="hero">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p>Last updated: June 14, 2026</p>
+    </div>
+  </section>
 
-  <h2>1. Information Collection</h2>
-  <p>Hydration Guide does <strong>not collect any personally identifiable information</strong>. The app does not require login, does not access your contacts, camera, or location unless you explicitly allow it in the future.</p>
+  <div class="container">
+    <div class="card">
+      <p>Fluid 101 ("we", "our", or "the app") provides educational hydration guidance. This policy explains what information the app handles and your choices regarding that data.</p>
 
-  <h2>2. Usage Data</h2>
-  <p>The app may collect anonymized usage statistics (e.g., screen views, button taps) to improve functionality. This data is never linked to your identity.</p>
+      <h2>Information We Collect</h2>
+      <p>Fluid 101 is designed to work primarily on your device. We do <strong>not</strong> require account registration and we do <strong>not</strong> sell your personal information.</p>
+      <ul>
+        <li><strong>Local app preferences</strong> — language, theme, and color settings stored on your device.</li>
+        <li><strong>Hydration tracker data</strong> — daily water intake and goals you enter, stored locally on your device.</li>
+        <li><strong>No server accounts</strong> — the app does not upload health or tracker data to our servers.</li>
+      </ul>
 
-  <h2>3. Data Sharing</h2>
-  <p>We do <strong>not share or sell your information</strong> with third parties. All processing, if any, is kept anonymous and used solely for app improvements.</p>
+      <h2>How We Use Information</h2>
+      <ul>
+        <li>To remember your language and display preferences.</li>
+        <li>To show your daily hydration progress in the fluid tracker.</li>
+        <li>To provide educational content about fluids and oral rehydration.</li>
+      </ul>
 
-  <h2>4. Cookies & Analytics</h2>
-  <p>Hydration Guide does not use cookies. If analytics are used in future versions, they will only be implemented in accordance with industry-standard privacy protections.</p>
+      <h2>Data Storage</h2>
+      <p>All app data is stored locally on your device using secure platform storage (for example, SharedPreferences on mobile). If you uninstall the app or delete your local data, this information is removed from your device.</p>
 
-  <h2>5. Children's Privacy</h2>
-  <p>This app is safe for general audiences, including children. It contains no advertisements or in-app purchases. No data from children is knowingly collected.</p>
+      <h2>Third-Party Services</h2>
+      <p>The app may open external links (for example, maps to find nearby hospitals) using your device's browser or maps application. Those services have their own privacy policies.</p>
+      <p>This website is hosted on GitHub Pages. GitHub may collect standard web server logs as described in <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's Privacy Statement</a>.</p>
 
-  <h2>6. Changes to This Policy</h2>
-  <p>This privacy policy may be updated to reflect app enhancements or regulatory compliance. We recommend users check this page for updates periodically.</p>
+      <h2>Children's Privacy</h2>
+      <p>Fluid 101 is an educational reference tool. It is not directed at children under 13, and we do not knowingly collect personal information from children.</p>
 
-  <h2>7. Contact</h2>
-  <p>If you have questions about this privacy policy, you can reach us at: <br>
-    <a href="mailto:support@hydrationapp.io">support@hydrationapp.io</a></p>
+      <h2>Your Rights &amp; Choices</h2>
+      <p>You can delete all locally stored app data at any time:</p>
+      <ul>
+        <li>In the mobile app: open <strong>Settings</strong> and tap <strong>Delete All Local Data</strong>.</li>
+        <li>On this website: use the button below to clear browser storage for this site.</li>
+        <li>On your device: uninstall the app to remove all stored data.</li>
+      </ul>
 
-  <p>&copy; 2025 Hydration Guide by Innovators Generation. All rights reserved.</p>
+      <div class="danger-zone">
+        <h2 style="margin-top:0;color:#b91c1c;">Delete Local Website Data</h2>
+        <p style="margin-bottom:1rem;">Clears any data saved in your browser for this site (localStorage and sessionStorage).</p>
+        <button class="btn btn-danger" type="button" onclick="deleteLocalData()">
+          <i class="fas fa-trash-alt"></i> Delete Local Data
+        </button>
+      </div>
+
+      <div class="note">
+        <strong>Medical disclaimer:</strong> Fluid 101 provides educational information only and is not a substitute for professional medical advice. Always consult a qualified healthcare provider.
+      </div>
+
+      <h2>Changes to This Policy</h2>
+      <p>We may update this policy from time to time. The "Last updated" date at the top of this page will reflect any changes.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this privacy policy? Visit our <a href="support.html">Support page</a> or email <a href="mailto:support@fluid101.app">support@fluid101.app</a>.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Fluid 101 · <a href="index.html">Home</a> · <a href="support.html">Support</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function deleteLocalData() {
+      if (!confirm('Delete all locally stored data for this site on this device? This cannot be undone.')) return;
+      try {
+        localStorage.clear();
+        sessionStorage.clear();
+        alert('Local data has been deleted successfully.');
+      } catch (e) {
+        alert('Unable to delete local data. Please clear site data in your browser settings.');
+      }
+    }
+  </script>
 </body>
 </html>
